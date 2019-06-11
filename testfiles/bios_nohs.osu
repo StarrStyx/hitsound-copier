@@ -1,0 +1,75 @@
+osu file format v14
+
+[General]
+AudioFilename: licking.mp3
+AudioLeadIn: 0
+PreviewTime: 134
+Countdown: 0
+SampleSet: Normal
+StackLeniency: 0.7
+Mode: 0
+LetterboxInBreaks: 0
+WidescreenStoryboard: 1
+
+[Editor]
+DistanceSpacing: 0.8
+BeatDivisor: 4
+GridSize: 4
+TimelineZoom: 1
+
+[Metadata]
+Title:BIOS (feat. Mika Kobayashi)
+TitleUnicode:BIOS (feat. Mika Kobayashi)
+Artist:Sawano Hiroyuki
+ArtistUnicode:Sawano Hiroyuki
+Creator:StarForYou
+Version:BIOS_nohs
+Source:
+Tags:starfy chaoslitz ming3012 -N_a_n_a_k_o- -_G_I_D_Z_- akiko- taku dorara123 starrstyx -TakoYaki-
+BeatmapID:0
+BeatmapSetID:351336
+
+[Difficulty]
+HPDrainRate:7
+CircleSize:4.8
+OverallDifficulty:8.5
+ApproachRate:9.6
+SliderMultiplier:1.8
+SliderTickRate:1
+
+[Events]
+//Background and Video events
+0,0,"BG.jpg",0,0
+//Break Periods
+//Storyboard Layer 0 (Background)
+//Storyboard Layer 1 (Fail)
+//Storyboard Layer 2 (Pass)
+//Storyboard Layer 3 (Foreground)
+//Storyboard Sound Samples
+
+[TimingPoints]
+-175,309.278350515464,4,1,1,20,1,0
+134,-200,4,2,1,20,0,0
+598,-133.333333333333,4,2,1,40,0,0
+907,-133.333333333333,4,1,1,60,0,0
+1062,-100,4,1,1,60,0,1
+4773,-100,4,1,1,60,0,0
+
+
+[HitObjects]
+309,273,134,6,0,P|341:265|405:277,1,90
+404,284,598,6,0,P|357:295|264:278,1,135.000005149842
+255,280,1062,6,0,L|259:172,1,90
+148,56,1371,2,0,L|151:145,1,90
+431,108,1680,2,0,P|346:79|260:99,1,180
+87,303,2144,1,0,0:0:0:0:
+347,240,2299,1,0,0:0:0:0:
+99,138,2453,1,0,0:0:0:0:
+239,365,2608,1,0,0:0:0:0:
+260,99,2762,1,0,0:0:0:0:
+87,303,2917,6,0,P|180:284|280:316,1,180
+464,364,3381,1,0,0:0:0:0:
+260,304,3536,2,0,P|240:256|244:204,1,90
+431,108,3845,2,0,P|429:152|411:193,1,90
+99,138,4154,2,0,B|68:116|68:116|228:108,1,180
+512,192,4618,1,0,0:0:0:0:

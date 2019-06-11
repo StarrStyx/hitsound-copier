@@ -1,0 +1,9 @@
+this is
+
+a test file
+
+[Difficulty]
+settings idk: 010293
+
+[Objects]
+abcdefg

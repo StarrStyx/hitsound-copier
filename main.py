@@ -11,7 +11,7 @@ import os
 mapfileinput = "testfiles\\bios_hs.osu"
 mapfilehitsound = "testfiles\\bios_nohs.osu"
 mapfilebackup = mapfileinput + ".bak"
-asdf = "debug.txt"
+asdf = "testfiles\\debug.txt"
 
 # reading the file: testing with .txt
 # mapfileinput = "testfiles\\in.txt"
@@ -31,7 +31,8 @@ debug_timingpoints = open(asdf, "w")
 ##########################################################################
 
 # takes in .osu as string
-mapdata = input.read()
+mapdata_input = input.read()
+mapdata_hitsound = hitsound.read()
 
 # print(mapdata)
 
@@ -41,13 +42,25 @@ backup.write(mapdata)
 ##########################################################################
 
 # takes timing points
-timingpoints = mapdata.partition("[TimingPoints]")[2].partition("[HitObjects]")[0]
+timingpoints_input = mapdata_input.partition("[TimingPoints]")[2].partition("[HitObjects]")[0]
+timingpoints_hitsound = mapdata_hitsound.partition("[TimingPoints]")[2].partition("[HitObjects]")[0]
 
 # takes hitobjects
-hitobjects = mapdata.partition("[HitObjects]")[2]
+hitobjects_input = mapdata_input.partition("[HitObjects]")[2]
+hitobjects_hitsound = mapdata_hitsound.partition("[HitObjects]")[2]
 
-print(timingpoints)
-print(hitobjects)
+##########################################################################
+
+for line in timingpoints_input:
+    if line in ['\n', '\r\n']:
+        print("blank line aaa")
+
+##########################################################################
+
+debug_timingpoints.write(timingpoints_input)
+
+print(timingpoints_input)
+print(hitobjects_input)
 
 # debug
 print(mapfileinput)

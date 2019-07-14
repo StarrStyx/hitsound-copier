@@ -5,6 +5,10 @@ import os
 # mapfile = input("Target .osu filename: ")
 # mapfile = input("Hitsounded .osu filename: ")
 
+# LEGEND
+# tp: timingpoints
+# ho: hitobjects
+
 ###########################################################################
 
 # reading the file: testing with .osu
@@ -37,13 +41,17 @@ mapdata_hitsound = hitsound.read()
 # print(mapdata)
 
 # backup input .osu
-backup.write(mapdata)
+backup.write(mapdata_input)
 
 ##########################################################################
 
 # takes timing points
-timingpoints_input = mapdata_input.partition("[TimingPoints]")[2].partition("[HitObjects]")[0]
-timingpoints_hitsound = mapdata_hitsound.partition("[TimingPoints]")[2].partition("[HitObjects]")[0]
+tp_input = mapdata_input.partition("[TimingPoints]")[2].partition("[HitObjects]")[0]
+tp_hitsound = mapdata_hitsound.partition("[TimingPoints]")[2].partition("[HitObjects]")[0]
+
+##########################################################################
+
+# WORK ON THIS LATER
 
 # takes hitobjects
 hitobjects_input = mapdata_input.partition("[HitObjects]")[2]
@@ -51,16 +59,22 @@ hitobjects_hitsound = mapdata_hitsound.partition("[HitObjects]")[2]
 
 ##########################################################################
 
-for line in timingpoints_input:
-    if line in ['\n', '\r\n']:
-        print("blank line aaa")
+#for line in timingpoints_input:
+#    if line in ['\n', '\r\n']:
+#        print("blank line aaa")
+
+#for line in timingpoints_input:
+#    if line[0] == '\n':
+#        print("w.e")
 
 ##########################################################################
 
-debug_timingpoints.write(timingpoints_input)
+debug_timingpoints.write(tp_input)
+#debug_timingpoints.write("separate")
+#debug_timingpoints.write(hitobjects_input)
 
-print(timingpoints_input)
-print(hitobjects_input)
+print(tp_input)
+#print(hitobjects_input)
 
 # debug
 print(mapfileinput)
